@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+
+</head>
+<body>
+<ul id="navbar">
+    <li><a href="index.html">Главная</a>
+        <ul>
+            <li><a href="journalTM.html">Журнал выдачи ТМ</a></li>
+        </ul>
+    </li>
+    <li><a href="checkPlan.html">План</a></li>
+    <li><a href="checkProtocol.html">Протокол</a></li>
+    <li><a href="#">Показать</a>
+        <ul>
+            <li><a href="listappendix">Приложения с нарушениями</a></li>
+            <li><a href="listappendixwithout">Приложения без нарушений</a></li>
+        </ul>
+    </li>
+    <li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+<form action="/add_act" method="POST">
+    <p>Добавьте поля:</p>
+    <div>
+        <label for="department">Подразделение:</label>
+        <input name="department" id="department">
+    </div>
+    <Br>
+    <div>
+        <label for="address">Адрес:</label>
+        <input name="address" id="address" value="ул. Полины-Осипенко,40">
+    </div>
+    <Br>
+    <div>
+        <label for="authority">Основание проверки:</label>
+        <input name="authority" id="authority" size="50" value="Распоряжение № 2044 от 03.03.2021">
+    </div>
+    <Br>
+    <div>
+        <label for="period">Сроки проведения:</label>
+        <input name="period" id="period" value="01.01.2021 - 31.03.2021">
+    </div>
+    <Br>
+    <div>
+        <p>Проверяемые вопросы:<Br>
+            <textarea name="questions" cols="80" rows="10">Правила работы с информацией
+Наличие на рабочем месте и в помещениях документов, содержащих персональные данные, банковскую тайну,
+документы с грифом «Коммерческая тайна», пометками «Конфиденциально», «ДСП» и подобными в отсутствии работника.
+Наличие оставленных документов, содержащих КД, в принтерах/сканерах
+Наличие документов, содержащих КИ, в мусорных корзинах
+Уровень доступа работника к категории конфиденциальности информации
+Нарушение правил работы с СВТ
+Подключение к АРМ USB – носителей, оптических и внешних жестких дисков
+Подключение к АРМ мобильных устройств (смартфоны, планшеты, ноутбуки и др.), устройств для выхода в сеть Internet и др.
+Режим блокировки АРМ в отсутствии работника на рабочем месте
+Наличие модифицированного АРМ работника
+Нарушение правил работы с УЗ и АС
+Наличие в открытом доступе аутентификационной информации от учетных записей или АС
+Наличие оставленного без присмотра на рабочем месте рабочего ТМ-идентификатора</textarea></p>
+    </div>
+    <Br>
+    <div>
+        <label for="result">Результат:</label>
+        <input name="result" id="result">
+    </div>
+    <Br>
+    <div>
+        <p>План устранения нарушений:<Br>
+            <textarea name="plan" cols="80" rows="10"></textarea></p>
+    </div>
+    <div>
+        <p>Список приложений:<Br>
+            <textarea name="appendix" cols="80" rows="5"></textarea></p>
+    </div>
+    <p>Работники прнимавший участие в провреке:<Br></p>
+    <div style="display:inline-block">
+        <label for="department1">Подразделение:__________</label>
+        <label for="position1">должность:____________</label>
+        <label for="fio1">ФИО:</label>
+    </div>
+    <Br>
+    <div style="display:inline-block">
+        <input name="department1" id="department1">
+        <input name="position1" id="position1">
+        <input name="fio1" id="fio1">
+    </div>
+    <Br>
+    <div style="display:inline-block">
+        <input name="department2" id="department2">
+        <input name="position2" id="position2">
+        <input name="fio2" id="fio2">
+    </div>
+    <Br>
+    <div style="display:inline-block">
+        <input name="department3" id="department3">
+        <input name="position3" id="position3">
+        <input name="fio3" id="fio3">
+    </div>
+    <Br>
+    <div>
+        <Br><button>Добавить запись в акт</button>
+    </div>
+</form>
+<form action="checkAppendix.html">
+    <div>
+        <Br><button>Добавить Приложение c нарушениями</button>
+    </div>
+</form>
+<form action="checkAppendixwithout.html">
+    <div>
+        <Br><button>Добавить Приложение без нарушений</button>
+    </div>
+</form>
+</body>
+</html>

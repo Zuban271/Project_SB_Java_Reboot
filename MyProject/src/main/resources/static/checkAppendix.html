@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+
+</head>
+<body>
+<ul id="navbar">
+    <li><a href="index.html">Главная</a>
+        <ul>
+            <li><a href="journalTM.html">Журнал выдачи ТМ</a></li>
+        </ul>
+    </li>
+    <li><a href="checkPlan.html">План</a></li>
+    <li><a href="checkProtocol.html">Протокол</a></li>
+    <li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+<form action="/add_appendix" method="POST" enctype="multipart/form-data">
+    <p>Добавьте поля:</p>
+    <div>
+        <label for="workplace">Номер раб. места/помещения:</label>
+        <input name="workplace" id="workplace">
+    </div>
+    <Br>
+    <div>
+        <label for="fio_pos_dep">ФИО, Должность, Подразделение:</label>
+        <input name="fio_pos_dep" id="fio_pos_dep" size="50" value="Иванов И.И., Инспектор, УБ">
+    </div>
+    <Br>
+    <div>
+        <label for="time_fix">Время фиксации:</label>
+        <input name="time_fix" type="datetime-local" id="time_fix">
+    </div>
+    <Br>
+    <div>
+        <label for="file">фотографии нарушений:</label>
+        <input name="file" type="file" id="file">
+    </div>
+    <Br>
+    <div>
+        <p>Объяснение сотрудника:<Br>
+            <textarea name="explanation" cols="80" rows="5"></textarea></p>
+    </div>
+    <Br>
+    <div>
+        <Br><button>Добавить приложение</button>
+    </div>
+</form>
+
+</body>
+</html>

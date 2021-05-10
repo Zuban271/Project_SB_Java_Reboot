@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+
+</head>
+<body>
+<ul id="navbar">
+    <li><a href="index.html">Главная</a>
+        <ul>
+            <li><a href="journalTM.html">Журнал выдачи ТМ</a></li>
+        </ul>
+    </li>
+    <li><a href="checkProtocol.html">Протокол</a></li>
+    <li><a href="checkAct.html">Акт проверки</a></li>
+    <li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+<form action="/add_plan" method="POST">
+    <p>Добавьте поля:</p>
+    <div>
+        <label for="nameobject">Наименование объекта проверки:</label>
+        <input name="nameobject" id="nameobject">
+    </div>
+    <div>
+        <label for="addressobject">Адрес местонахождения объекта проверки:</label>
+        <input name="addressobject" id="addressobject" value="ул. Подгорбунского,62">
+    </div>
+    <div>
+        <label for="period">Период проведения проверки:</label>
+        <input name="period" id="period" value="2 квартал">
+    </div>
+    <div>
+        <label for="responsible">Отвественный:</label>
+        <input name="responsible" id="responsible" value="Иванов И.И.">
+    </div>
+    <div>
+        <label for="done">Выполнен Да./Нет.</label>
+        <input type="checkbox" name="done" id="done">
+    </div>
+
+    <div>
+        <button>Добавить запись в план</button>
+    </div>
+</form>
+</body>
+</html>

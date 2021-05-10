@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+
+</head>
+<body>
+<ul id="navbar">
+    <li><a href="index.html">Главная</a>
+        <ul>
+            <li><a href="journalTM.html">Журнал выдачи ТМ</a></li>
+        </ul>
+    </li>
+    <li><a href="checkPlan.html">План</a></li>
+    <li><a href="checkProtocol.html">Протокол</a></li>
+    <li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+<form action="/add_appendixwithout" method="POST">
+    <p>Добавьте поля:</p>
+    <div>
+        <label for="date">Дата проверки:</label>
+        <input name="date" type="date" id="date">
+    </div>
+    <Br>
+    <div>
+        <label for="fio">Проверяющие, ФИО:</label>
+        <input name="fio" id="fio" value="Иванов И.И.">
+    </div>
+    <Br>
+    <div>
+        <label for="department">Проверяемое подразделение:</label>
+        <input name="department" id="department">
+    </div>
+    <Br>
+    <div>
+        <label for="address">Адрес:</label>
+        <input name="address" size="50" id="address">
+    </div>
+    <Br>
+    <div>
+        <label for="workcount">Количество проверенных рабочих мест:</label>
+        <input name="workcount" size="10" id="workcount">
+    </div>
+    <Br>
+    <div>
+        <Br><button>Добавить приложение</button>
+    </div>
+</form>
+
+</body>
+</html>

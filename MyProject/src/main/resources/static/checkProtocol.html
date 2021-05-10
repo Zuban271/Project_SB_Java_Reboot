@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+
+</head>
+<body>
+<ul id="navbar">
+    <li><a href="index.html">Главная</a>
+        <ul>
+            <li><a href="journalTM.html">Журнал выдачи ТМ</a></li>
+        </ul>
+    </li>
+    <li><a href="checkPlan.html">План</a></li>
+    <li><a href="checkAct.html">Акт проверки</a></li>
+    <li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+<form action="/add_protocol" method="POST">
+    <p>Добавьте поля:</p>
+    <div>
+        <label for="date">Дата:</label>
+        <input type="date" name="date" id="date">
+    </div>
+    <div>
+        <label for="workplace">Рабочее место:</label>
+        <input name="workplace" id="workplace">
+    </div>
+    <Br>
+    <div>
+        <label for="office">Помещение:</label>
+        <input name="office" id="office" value="каб.306">
+    </div>
+    <Br>
+    <div>
+        <label for="authority">Основание проверки:</label>
+        <input name="authority" id="authority" size="50" value="Распоряжение № 2044 от 03.03.2021">
+    </div>
+    <Br>
+    <div>
+        <label for="fio">ФИО работника:</label>
+        <input name="fio" id="fio" value="Иванов И.И.">
+    </div>
+    <Br>
+    <div>
+        <label for="position">Должность работника:</label>
+        <input name="position" id="position" value="Старший инженер">
+    </div>
+    <Br>
+    <div>
+        <label for="confidental">Наличие документов конфиденциального характера на рабочем месте работника/в помещении, в отсутствие работников Да./Нет.</label>
+        <input type="checkbox" name="confidental" id="confidental">
+    </div>
+    <div>
+        <label for="notblock">АРМ не заблокировано в отсутствие работника Да./Нет.</label>
+        <input type="checkbox" name="notblock" id="notblock">
+    </div>
+    <div>
+        <label for="integrity">Нарушение целостности средств вычислительной техники Да./Нет.</label>
+        <input type="checkbox" name="integrity" id="integrity">
+    </div>
+    <div>
+        <label for="unregistered">Наличие неучтенных средств вычислительной техники Да./Нет.</label>
+        <input type="checkbox" name="unregistered" id="unregistered">
+    </div>
+    <div>
+        <label for="device">Наличие подключенных к АРМ оборудования для беспроводной передачи данных Да./Нет.</label>
+        <input type="checkbox" name="device" id="device">
+    </div>
+    <div>
+        <label for="identificator">Наличие в свободном доступе ТМ-идентификаторов Да./Нет.</label>
+        <input type="checkbox" name="identificator" id="identificator">
+    </div>
+    <div>
+        <label for="password">Хранение паролей в открытом доступе Да./Нет.</label>
+        <input type="checkbox" name="password" id="password">
+    </div>
+    <div>
+        <label for="etc">Прочее Да./Нет.</label>
+        <input type="checkbox" name="etc" id="etc">
+    </div>
+    <div>
+        <p>Для записей:<Br>
+            <textarea name="record" cols="80" rows="10"></textarea></p>
+    </div>
+    <div>
+        <button>Добавить запись в протокол</button>
+    </div>
+</form>
+</body>
+</html>

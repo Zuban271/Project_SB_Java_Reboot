@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form check WP</title>
+  <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+
+</head>
+<body>
+<ul id="navbar">
+<li><a href="index.html">Главная</a>
+  <ul>
+    <li><a href="journalTM.html">Журнал выдачи ТМ</a></li>
+  </ul>
+</li>
+<li><a href="checkPlan.html">План</a>
+    <ul>
+        <li><a href="listplan">Показать</a></li>
+    </ul>
+</li>
+<li><a href="checkProtocol.html">Протокол</a>
+    <ul>
+        <li><a href="listprotocol">Показать</a></li>
+    </ul>
+</li>
+<li><a href="checkAct.html">Акт проверки</a>
+    <ul>
+        <li><a href="listact">Показать</a></li>
+    </ul>
+</li>
+<li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+
+</body>
+</html>

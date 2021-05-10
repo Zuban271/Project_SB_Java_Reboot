@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал выдачи ТМ</title>
+    <style>
+      #navbar ul{
+        display: none;
+        background-color: #f90;
+        position: absolute;
+        top: 100%;
+      }
+      #navbar li:hover ul { display: block; }
+      #navbar, #navbar ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #navbar {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+      }
+      #navbar li {
+        float: left;
+        position: relative;
+        height: 100%;
+      }
+      #navbar li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      #navbar ul li { float: none; }
+      #navbar li:hover { background-color: #f90; }
+      #navbar ul li:hover { background-color: #666; }
+
+    </style>
+</head>
+<body>
+<ul id="navbar">
+    <li><a href="index.html">Главная</a>
+        <ul>
+            <li><a href="checkWP.html">Проверка РМ</a></li>
+        </ul>
+    </li>
+    <li><a href="list">Показать журнал</a></li>
+    <li><a href="javascript:alert('Проект Java.Reboot Зубань Алпексея!')">О программе</a></li>
+</ul>
+
+    <form action="/add" method="POST">
+        <p>Добавьте поля:</p>
+    <div>
+        <label for="date">Дата:</label>
+        <input type="date" name="date" id="date">
+    </div>
+    <div>
+        <label for="number_TM">Номер ТМ:</label>
+        <input name="number_TM" id="number_TM" value="E6F500000000">
+    </div>
+    <div>
+        <label for="responsible">Отвественный:</label>
+        <input name="responsible" id="responsible" value="Иванов И.И.">
+    </div>
+    <div>
+        <label for="given">Передан Да./Нет.</label>
+        <!--<input type="hidden" name="given" id="given1" value="false">-->
+        <input type="checkbox" name="given" id="given">
+    </div>
+    <div>
+        <label for="toWhom">Кому передан:</label>
+        <input name="toWhom" id="toWhom" value="ВСП 8600/001">
+    </div>
+    <div>
+        <label for="zno">ЗНО:</label>
+        <input name="zno" id="zno" value="ЗНО10023300">
+    </div>
+    <div>
+        <button>Добавить запись в журнал</button>
+    </div>
+</form>
+
+
+
+<!--<form action="/list" method="GET">-->
+<!--<button>List customers</button> -->
+<!--<a href="list">Show customers</a>-->
+<!--</form>-->
+</body>
+</html>
