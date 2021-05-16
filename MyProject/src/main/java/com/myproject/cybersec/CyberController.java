@@ -39,7 +39,7 @@ public class CyberController {
         tm_identifireRepository.save(tm_identifire);
 
         Integer Id = tm_identifire.getId();
-        var tm_identifires =  tm_identifireService.findTM_identifireById(Id);
+        var tm_identifires =  (List<TM_identifire>) new  ArrayList<>(Arrays.asList(tm_identifireService.findTM_identifireById(Id)));
         model.addAttribute("tm_identifires", tm_identifires);
         return "showTMIdentifire";
     }
@@ -69,7 +69,7 @@ public class CyberController {
         planRepository.save(plan);
 
         Integer Id = plan.getId();
-        var plans = planService.findPlantById(Id);
+        var plans = (List<Plan>) new ArrayList<>(Arrays.asList(planService.findPlantById(Id)));
         model.addAttribute("plans", plans);
         return "showPlan";
     }
@@ -113,7 +113,7 @@ public class CyberController {
 
         protocolRepository.save(protocol);
         Integer Id = protocol.getId();
-       var protocols =  protocolService.findProtocolById(Id);
+       var protocols =  (List<Protocol>) new ArrayList<>(Arrays.asList(protocolService.findProtocolById(Id)));
         model.addAttribute("protocols", protocols);
         return "showProtocol";
 
